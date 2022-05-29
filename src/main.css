@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #000000;
+  --widget-background: #121416;
+  --color-grey: #a5a5a5;
+  --primary-color: #fb6b09;
+}
+
+
+body {
+  background: #000000;
+  color: var(--color-grey);
+  font-family: 'Fira Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 200ms;
+}
+
+a:hover{
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+.landing-page {
+  height: 100vh;
+  width: min(350px, 90vw);
+  margin: auto;
+  padding: 30px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.picture {
+  width: 100%;
+}
+
+.picture img {
+  display: block;
+  width: 250px;
+  margin: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description .title {
+  font-family: 'Satisfy', cursive;
+  font-size: 20pt;
+  color: var(--primary-color);
+  transition: 600ms;
+  line-height: 1.2;
+  margin: 30px 0px;
+  white-space: pre;
+}
+
+.description .title:hover {
+  line-height: 1.6;
+}
+
+.description p {
+  color: var(--color-grey);
+  font-weight: 300;
+  font-size: 11pt;
+  text-align: center;
+}
+
+.description p span:hover{
+  color: var(--primary-color);
+}
+
+footer{
+  border-top: 1px solid #121416;
+  height: 50px;
+  text-align: center;
+}
+
+footer span {
+  display: block;
+  padding: 20px 0;
+  color: #b6b6b6;
+}
+
+@media screen and (min-width: 500px) {
+  .landing-page {
+    width: min(70vw, 800px);
+  }
+
+  .landing-page .picture img {
+    width: 300px;
+  }
+
+  .description .title {
+    font-size: 28pt;
+  }
+
+  .description p{
+    font-size: 12pt;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .landing-page {
+    width: 800px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .landing-page .picture img {
+    width: 300px;
+    margin-left: 30px;
+  }
+
+  .description{
+    align-items: flex-start;
+  }
+
+  .description .title {
+    font-size: 36pt;
+  }
+
+  .description p{
+    font-size: 14pt;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .landing-page {
+    width: 1000px;
+  }
+
+  .landing-page .picture img {
+    width: 350px;
+    margin-left: 30px;
+  }
+}
